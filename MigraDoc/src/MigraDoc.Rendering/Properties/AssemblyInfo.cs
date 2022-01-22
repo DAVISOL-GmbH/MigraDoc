@@ -28,7 +28,9 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+#if WPF
 using System.Windows.Markup;
+#endif
 using MigraDoc.Rendering;
 
 [assembly: AssemblyTitle(VersionInfo.Title)]
@@ -50,5 +52,6 @@ using MigraDoc.Rendering;
 //[assembly: AssemblyKeyName("")]
 
 #if WPF
+[assembly: XmlnsPrefix("http://schemas.empira.com/migradoc/2010/xaml/presentation", "migradoc")]
 [assembly: XmlnsDefinition("http://schemas.empira.com/migradoc/2010/xaml/presentation", "MigraDoc.Rendering.Windows")]
 #endif
