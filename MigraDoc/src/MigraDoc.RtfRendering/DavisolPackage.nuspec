@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
 	<metadata>
-		<id>Empira.MigraDoc.RtfRendering.Wpf</id>
+		<id>Empira.MigraDoc.RtfRendering</id>
 		<version>$version$</version>
 		<title>Empira MigraDoc library</title>
 		<authors>Empira GmbH</authors>
