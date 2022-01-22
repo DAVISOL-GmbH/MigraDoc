@@ -28,6 +28,7 @@
 using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using System.Windows.Markup;
 using MigraDoc.Rendering;
 
 [assembly: AssemblyTitle(VersionInfo.Title)]
@@ -47,3 +48,5 @@ using MigraDoc.Rendering;
 [assembly: ComVisible(false)]
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyName("")]
+
+[assembly: XmlnsDefinition("http://schemas.empira.com/migradoc/2010/xaml/presentation", "MigraDoc.Rendering.Windows")]
