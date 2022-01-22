@@ -143,10 +143,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Empira.PdfSharp">
-      <Version>2.0.1848.1</Version>
+      <Version>2.0.1851.1</Version>
     </PackageReference>
     <PackageReference Include="Empira.PdfSharp.Charting">
-      <Version>2.0.1848.1</Version>
+      <Version>2.0.1851.1</Version>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
