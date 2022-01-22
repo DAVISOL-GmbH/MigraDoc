@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package >
+	<metadata>
+		<id>Empira.MigraDoc.Rendering</id>
+		<version>$version$</version>
+		<title>Empira MigraDoc library</title>
+		<authors>Empira GmbH</authors>
+		<owners>empira</owners>
+		<license type="expression">MIT</license>
+		<projectUrl>https://github.com/DAVISOL-GmbH/MigraDoc</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>The ...</description>
+		<copyright>Copyright empira GmbH, Copyright ©2021 DAVISOL GmbH</copyright>
+		<tags>empira pdf migradoc netframework davisol</tags>
+		<releaseNotes>Enhanced fork of ...</releaseNotes>
+	</metadata>
+	<files>
+		<!-- .Net Framework 4.7.2 -->
+		<file src="bin\Release\Empira.MigraDoc.DocumentObjectModel.dll" target="lib\net472\Empira.MigraDoc.DocumentObjectModel.dll" />
+		<file src="bin\Release\Empira.MigraDoc.DocumentObjectModel.xml" target="lib\net472\Empira.MigraDoc.DocumentObjectModel.xml" />
+		<file src="bin\Release\de\Empira.MigraDoc.DocumentObjectModel.resources.dll" target="lib\net472\de\Empira.MigraDoc.DocumentObjectModel.resources.dll" />
+		<file src="bin\Release\Empira.MigraDoc.DocumentObjectModel.pdb" target="lib\net472\Empira.MigraDoc.DocumentObjectModel.pdb" />
+		<file src="bin\Release\Empira.MigraDoc.Rendering.dll" target="lib\net472\Empira.MigraDoc.Rendering.dll" />
+		<file src="bin\Release\Empira.MigraDoc.Rendering.xml" target="lib\net472\Empira.MigraDoc.Rendering.xml" />
+		<file src="bin\Release\de\Empira.MigraDoc.Rendering.resources.dll" target="lib\net472\de\Empira.MigraDoc.Rendering.resources.dll" />
+		<file src="bin\Release\Empira.MigraDoc.Rendering.pdb" target="lib\net472\Empira.MigraDoc.Rendering.pdb" />
+	</files>
+</package>

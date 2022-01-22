@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <ProjectType>Local</ProjectType>
     <ProductVersion>9.0.21022</ProductVersion>
@@ -11,7 +11,7 @@
     </ApplicationIcon>
     <AssemblyKeyContainerName>
     </AssemblyKeyContainerName>
-    <AssemblyName>MigraDoc.RtfRendering-wpf</AssemblyName>
+    <AssemblyName>Empira.MigraDoc.RtfRendering.Wpf</AssemblyName>
     <AssemblyOriginatorKeyFile>StrongnameKey.snk</AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
@@ -28,7 +28,7 @@
     </UpgradeBackupLocation>
     <SignAssembly>true</SignAssembly>
     <OldToolsVersion>3.5</OldToolsVersion>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -72,6 +72,7 @@
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -81,7 +82,7 @@
     <ConfigurationOverrideFile>
     </ConfigurationOverrideFile>
     <DefineConstants>TRACE</DefineConstants>
-    <DocumentationFile>bin\Release\MigraDoc.RtfRendering-wpf.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Empira.MigraDoc.RtfRendering.Wpf.xml</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
     <FileAlignment>4096</FileAlignment>
     <NoStdLib>false</NoStdLib>
@@ -94,6 +95,7 @@
     <DebugType>full</DebugType>
     <ErrorReport>prompt</ErrorReport>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
@@ -266,6 +268,7 @@
     <EmbeddedResource Include="..\MigraDoc.RtfRendering\RtfRendering.Resources\Messages.restext">
       <Link>RtfRendering.Resources\Messages.restext</Link>
     </EmbeddedResource>
+    <None Include="DavisolPackage.nuspec" />
     <None Include="StrongnameKey.snk" />
   </ItemGroup>
   <ItemGroup>
@@ -296,14 +299,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\PDFsharp\src\PdfSharp-wpf\PdfSharp-wpf.csproj">
-      <Project>{02fcc0bb-2aa2-43ba-8d2f-66d168b87a1d}</Project>
-      <Name>PdfSharp-wpf</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\PDFsharp\src\PdfSharp.Charting-wpf\PdfSharp.Charting-wpf.csproj">
-      <Project>{e6a2734e-0cd6-4210-8aec-47ee348f8d78}</Project>
-      <Name>PdfSharp.Charting-wpf</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MigraDoc.DocumentObjectModel-wpf\MigraDoc.DocumentObjectModel-wpf.csproj">
       <Project>{769E6587-72F9-475C-9422-D43ACD4C7AC1}</Project>
       <Name>MigraDoc.DocumentObjectModel-wpf</Name>
@@ -317,6 +312,14 @@
     <EmbeddedResource Include="..\MigraDoc.RtfRendering\RtfRendering.Resources\PDF.png">
       <Link>RtfRendering.Resources\PDF.png</Link>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Empira.PdfSharp.Charting.Wpf">
+      <Version>2.0.1843.1</Version>
+    </PackageReference>
+    <PackageReference Include="Empira.PdfSharp.Wpf">
+      <Version>2.0.1843.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

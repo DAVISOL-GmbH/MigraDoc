@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -8,8 +8,8 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MigraDoc</RootNamespace>
-    <AssemblyName>MigraDoc.Rendering</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <AssemblyName>Empira.MigraDoc.Rendering</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -25,6 +25,7 @@
     <DefineConstants>TRACE;DEBUG;CORE;CORE_WITH_GDI</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -33,7 +34,8 @@
     <DefineConstants>TRACE;CORE;CORE_WITH_GDI</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\MigraDoc.Rendering.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Empira.MigraDoc.Rendering.xml</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -120,14 +122,6 @@
     <Compile Include="Rendering\TopDownFormatter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\PDFsharp\src\PdfSharp.Charting\PdfSharp.Charting.csproj">
-      <Project>{6f98a822-41b0-4c7a-85a6-e95c1d3e88ef}</Project>
-      <Name>PdfSharp.Charting</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\PDFsharp\src\PdfSharp\PdfSharp.csproj">
-      <Project>{5a6055bc-bf86-4fdd-9f62-0109db7a303b}</Project>
-      <Name>PdfSharp</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MigraDoc.DocumentObjectModel\MigraDoc.DocumentObjectModel.csproj">
       <Project>{6318a852-ef6b-486f-8547-3d7e736d7943}</Project>
       <Name>MigraDoc.DocumentObjectModel</Name>
@@ -136,6 +130,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Rendering.Resources\Messages.de.restext" />
     <EmbeddedResource Include="Rendering.Resources\Messages.restext" />
+    <None Include="DavisolPackage.nuspec" />
     <None Include="StrongnameKey.snk" />
   </ItemGroup>
   <ItemGroup>
@@ -146,7 +141,14 @@
       <DependentUpon>Messages2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <PackageReference Include="Empira.PdfSharp">
+      <Version>2.0.1843.1</Version>
+    </PackageReference>
+    <PackageReference Include="Empira.PdfSharp.Charting">
+      <Version>2.0.1843.1</Version>
+    </PackageReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
