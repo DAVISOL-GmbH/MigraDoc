@@ -49,4 +49,6 @@ using MigraDoc.Rendering;
 //[assembly: AssemblyDelaySign(false)]
 //[assembly: AssemblyKeyName("")]
 
+#if WPF
 [assembly: XmlnsDefinition("http://schemas.empira.com/migradoc/2010/xaml/presentation", "MigraDoc.Rendering.Windows")]
+#endif
